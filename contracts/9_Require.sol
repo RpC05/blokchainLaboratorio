@@ -12,6 +12,7 @@ contract Require {
     }
 
     function cambiarCodigo(uint256 _codigo) public{
+        require(msg.sender == propietario, "No puedes ejecutar pq no eres el propietario del contrato");
         codigo = _codigo;
     }
 
